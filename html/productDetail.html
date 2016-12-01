@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情页</title>
+    <link rel='icon' href="http://api.winshares.cn/assets/www/img/ico.ico" type=‘image/x-ico’/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+</head>
+<body>
+<div id='header'></div>
+<section class="" id="Portfolio" style="overflow: hidden;">
+    <div class="container row" style="padding: 0px 65px;margin: 0 auto;">
+
+        <div class="col-md-7">
+            <div class="foucebox">
+                <div class="bd">
+                    <!--<div class="showDiv"><a href="#"><img src="../images/productDetails/hjhpg01.jpg"></a>-->
+                    <!--</div>-->
+                    <!--<div class="showDiv"><a href="#"><img src="../images/productDetails/hjhpg02.jpg"></a>-->
+                    <!--</div>-->
+                    <!--<div class="showDiv"><a href="#"><img src="../images/productDetails/hjhpg03.jpg"></a>-->
+                    <!--</div>-->
+                </div>
+                <div class="hd">
+                    <ul style="padding: 0;width: 500px">
+                        <!--<li class="on"><a href="#"><img src="../images/productDetails/hjhpg01.jpg">-->
+                            <!--<span class="mask"></span></a>-->
+                        <!--</li>-->
+                        <!--<li class="on"><a href="#"><img src="../images/productDetails/hjhpg02.jpg">-->
+                            <!--<span class="mask"></span></a>-->
+                        <!--</li>-->
+                        <!--<li class="on"><a href="#"><img src="../images/productDetails/hjhpg03.jpg">-->
+                            <!--<span class="mask"></span></a>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <h5 style="margin:15px auto;" class="pname"></h5>
+            <div class="price">
+                <span class="number"></span>
+                <span class="unit">元/位</span>
+                <span class="original"></span>
+            </div>
+            <div class="position"><span class="desc"></span></div>
+            <div class="position"><span>随时退</span></div>
+            <div class="sub-product">
+                <div class="btns">
+                    <a ><button class="now">立即购买</button></a>
+                </div>
+            </div>
+
+            <div class="address text-left"><h5>千禧大酒店瑶池中餐厅</h5>
+                <div ><span class="fa fa-map-marker "></span>
+                    <p style="margin: 0" class='text-left'>朝阳区东三环中路9号北京千禧大酒店1层</p></div>
+                <div><span class="fa fa-phone"></span>
+                    <p class='text-left'>010-85876888</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="reasons">
+        <div class="title">亮点</div>
+        <ul>
+            <li>香港大厨亲自坐镇 出品经典的酒店粤餐厅</li>
+            <li>品类丰富的点心自助 带来精彩“粤式畅享”</li>
+            <li>来 CBD 畅食星级粤式美馔 ENJOY 独享68折</li>
+        </ul>
+    </div>
+
+    <div class="goods_detail_div" id="goods_detail_div" style="max-width: 760px;"></div>
+
+    <div class="tips">
+        <div class="title">温馨提示</div>
+        <ul>
+            <li>使用日期：2016.10.22-2017.1.16；</li>
+            <li>使用时间：周六周日，11:30-14:30；</li>
+            <li>特别提示：公众假日及特殊节假日用餐，请提前致电商家；</li>
+            <li>建议提前预约，预约拨打酒店总机号码：010-8587 6888 并转拨 3013；</li>
+            <li>本产品支持随时退款；</li>
+            <li>如需开具发票，请具体咨询商户；</li>
+            <li>如有疑问，请联系 云上会 客服。电话：4008-909-511；微信：enjoyricebook</li>
+        </ul>
+    </div>
+</section>
+<script src='../js/jquery.min.js'></script>
+<script src="../js/proDetail.js"></script>
+<script src='../js/jquery.sticky.js'></script>
+<script src='../js/jquery.SuperSlide.js'></script>
+<script>
+    $(function () {
+        $('#header').load('header.html')
+    })
+//    jQuery(".foucebox").slide({
+//        effect: "fold", autoPlay: true, delayTime: 300, startFun: function (i) {
+//            jQuery(".foucebox .showDiv").eq(i).find("h2").css({display: "none", bottom: 0}).animate({
+//                opacity: "show",
+//                bottom: "60px"
+//            }, 300);
+//            jQuery(".foucebox .showDiv").eq(i).find("p").css({display: "none", bottom: 0}).animate({
+//                opacity: "show",
+//                bottom: "10px"
+//            }, 300);
+//        }
+//    });
+    $('#goods_detail_div').html(htmlDecode('&lt;img src=&quot;http://api.winshares.cn/uploads/images/imagegroup/3/2016-10-26/485fc300709b44830e14be218bdd78a7.jpg&quot; width=&quot;100%&quot; height=&quot;auto&quot; class=&quot;imageselectitem&quot; id=&quot;image&quot; style=&quot;margin-top: -6px&quot;&gt;&lt;img src=&quot;http://api.winshares.cn/uploads/images/imagegroup/3/2016-10-26/320bfecad4440740f4cca61f1d5f9e36.jpg&quot; width=&quot;100%&quot; height=&quot;auto&quot; class=&quot;imageselectitem&quot; id=&quot;image&quot; style=&quot;margin-top: -6px&quot;&gt;&lt;img src=&quot;http://api.winshares.cn/uploads/images/imagegroup/3/2016-10-26/4a27cea7bf6836139c2541bc94ffb6d9.jpg&quot; width=&quot;100%&quot; height=&quot;auto&quot; class=&quot;imageselectitem&quot; id=&quot;image&quot; style=&quot;margin-top: -6px&quot;&gt;'));
+
+    function htmlDecode(value){
+        return $('<div/>').html(value).text();
+    }
+    //判断是否登录
+    $('.now').on('click',function () {
+        console.log('先判断是否登录')
+            //声明一个变量
+            var customerId = sessionStorage.customerId;
+            if(customerId == undefined){
+                //如果未登录，则跳转到登录页面
+                $(this).parent().attr('href','Login.html');
+                console.log('111')
+            }else{
+                //否则就跳转到到支付页面
+                $(this).parent().attr('href','buy-page.html?id='+getCookie('goodid'))
+            }
+    })
+</script>
+</body>
+</html>

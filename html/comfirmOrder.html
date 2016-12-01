@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>确认订单详情</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/buy-page.css">
+</head>
+<body>
+<!--1、头部-->
+<div id='header'></div>
+<!--2、购买页面-->
+<section id='bug_page'>
+    <!--1.购买提示导航-->
+    <div class='container clearfix' style='margin-top: 5%'>
+        <div class='pull-left'><h2>确认订单</h2></div>
+        <ul class='pull-left'>
+            <li >1.提交订单</li>
+            <li class='active'>2.完成支付</li>
+            <li>3.购买成功</li>
+        </ul>
+        <!--2.购买表单-->
+        <div class='buy-table bug-now pull-left' style='width:100%'>
+            <form action="">
+                <table class='table-data buy-add'>
+                    <thead>
+                    <th style="width:70%">商品名称</th>
+                    <th style="width:10%">单价</th>
+                    <th style="width:10%">数量</th>
+                    <th style="width:10%">总价</th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>秘制将军鹅</td>
+                        <td class='price'>138元</td>
+                        <td class='temp1-num'>
+                           1
+                        </td>
+                        <td><span class='total-price'>138</span>元</td>
+                    </tr>
+                    <tr>
+                        <td>礼券</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class='coupon-amount'>0</span>元</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class='.coupon'>
+                    <div class='exchange'>
+                        <div class="group"><input type="text" class='coupon-code'></div>
+                        <div class="group"><a class='goto-exchange'>兑换</a></div>
+                    </div>
+                    <div class=coupon-list>
+                        <ul></ul>
+                    </div>
+                </div>
+                <p class='text-right count'>应付金额<span class='total-price'>138</span>元</p>
+                <div class='text-right'>
+                    <input type="submit" value='提交订单' id='comfirmOrder-btn'>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!--3.弹框-->
+<div class='pop clearfix'>
+    <div class='order-content'>
+        <ul class='clearfix'>
+            <li id='success'>支付成功</li>
+            <li id='gofalse'>支付遇到问题</li>
+        </ul>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('#header').load('header.html')
+    })
+    $('#comfirmOrder-btn').on('click',function (e) {
+        e.preventDefault()
+        $('.pop').show()
+    })
+    $('#gofalse').click(function () {
+       $('.pop').hide()
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购买页面</title>
+    <link rel='icon' href="http://api.winshares.cn/assets/www/img/ico.ico" type=‘image/x-ico’/>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/buy-page.css">
+</head>
+<body>
+    <!--1、头部-->
+    <div id='header'></div>
+    <!--2、购买页面-->
+    <section id='bug_page'>
+        <!--1.购买提示导航-->
+        <div class='container clearfix' style='margin-top: 2%'>
+            <div class='pull-left'><h2>提交订单</h2></div>
+            <ul class='pull-left'>
+                <li class='active'>1.提交订单</li>
+                <li>2.完成支付</li>
+                <li>3.购买成功</li>
+            </ul>
+            <!--2.购买表单-->
+            <div class='buy-table bug-now pull-left' style='width:100%'>
+                <form action="">
+                    <table class='table-data buy-add'>
+                        <thead>
+                        <th style="width:70%">商品名称</th>
+                        <th style="width:10%">单价</th>
+                        <th style="width:10%">数量</th>
+                        <th style="width:10%">总价</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class=''></td>
+                            <td class='price'></td>
+                            <td>
+                                <div class='number-input'>
+                                    <span class='reduce add-off add-on'>-</span>
+                                    <input type="text" value="1" name='num' class='center-input' required>
+                                    <span class='add add-on'>+</span>
+                                </div>
+                            </td>
+                            <td><span class='total-price'></span>元</td>
+                        </tr>
+                        <tr>
+                            <td>手机号码</td>
+                            <td></td>
+                            <td></td>
+                            <td><span class='phone-number'>186****9284</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--编辑地址-->
+                    <div id='editAddress' class=''>
+                        <ul class='addressList'>
+                            <!--<li style='display: none'>-->
+                                <!--<div class='name'>-->
+                                    <!--<p></p>-->
+                                <!--</div>-->
+                                <!--<div class='place'>-->
+                                    <!--<p></p>-->
+                                <!--</div>-->
+                                <!--<div class='phone'>-->
+                                    <!--<span></span>-->
+                                    <!--<div class='opate'>-->
+                                        <!--<span class='edit'></span>-->
+                                        <!--<span style="margin: 0 5px">|</span>-->
+                                        <!--<span class='detele'></span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                        </ul>
+                        <div class='clearfix'></div>
+                    </div>
+                    <!--2.收货地址-->
+                    <div id='addAdress' class='btn pull-left'>
+                        添加收货地址
+                    </div>
+                    <p class='text-right count'>应付金额：<span class='total-price' name="
+"></span>元</p>
+                    <div class='text-right'>
+                        <input type="submit" value='提交订单' id='comfirm-btn'>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="adressPop">
+            <div class='overlayer'></div>
+            <div class='addressSel'>
+                <div class='head'>新增收货地址</div>
+                <form action="url" method='post' class="form-inline address-form">
+                    <div class="group">
+                        <label for="">所在地区</label>
+                        <div data-toggle="distpicker" class='pull-right' style="margin-right: 46px;">
+                            <div class="form-group">
+                                <label class="sr-only" for="province2">Province</label>
+                                <select class="form-control" id="province2" name='province' data-province="---- 选择省 ----"></select>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="city2">City</label>
+                                <select class="form-control" id="city2" name='city' data-city="---- 选择市 ----"></select>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="district2">District</label>
+                                <select class="form-control" id="district2" name='district' data-district="---- 选择区 ----"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <label for="">详细地址</label>
+                        <textarea name="uaddress" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="group">
+                        <label for="">邮政编码</label>
+                        <input type="text" name='postcode'>
+                    </div>
+                    <div class="group">
+                        <label for="">收货人姓名</label>
+                        <input type="text" name='uname'>
+                    </div>
+                    <div class="group">
+                        <label for="">收货人电话</label>
+                        <input type="text" name='uphone'>
+                    </div>
+                    <!--<div class="group">-->
+                    <!--<label for="">默认地址</label>-->
+                    <!--</div>-->
+                    <div class="group">
+                        <input type="submit" id="savaAdress" name="address" style="display: none" class="">
+                        <div class='edit-address' style='display: none;'>修改地址</div>
+                        <div class='submit-btn-web'>保存地址</div>
+                        <div class='cancle text-center'>取消</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id='err-alert'>
+            <span class='close'>X</span>
+            <p></p>
+        </div>
+    </section>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/distpicker.data.js"></script>
+    <script src="../js/distpicker.js"></script>
+    <script src='../js/buy-page.js'></script>
+</body>
+</html>
